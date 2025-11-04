@@ -5,8 +5,8 @@
   "main": "out/html/index.html",
   "scripts": {
     "dendrynexus": "dendrynexus",
-    "build": "npm run dendrynexus make-html -- --pretty && shx cp -r lib/. out/html && shx cp -r assets/. out/html && shx cp out/game.json out/html",
-    "clean": "shx rm -rf out"
+    "build": "npm run dendrynexus make-html -- --template template --pretty && shx cp -r lib/. out/html && shx cp -r assets/. out/html && shx cp out/game.json out/html",
+    "clean": "shx rm -rf 'out/!(html)' && shx rm -rf 'out/html/!(game.css|game.js|index.html|core.js|jquery-1.11.1.min.js)'"
   },
   "repository": {
     "type": "git",
